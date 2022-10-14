@@ -209,7 +209,7 @@ accordions.forEach((accordion) => {
 let scroll = document.querySelector("button.scroll"); // Get the scroll element.
 let scroll2 = document.querySelector("button.scroll2"); // Get scroll2 element.
 
-///// Scroll Codes /////
+///// Scroll 1 Codes /////
 
 window.addEventListener("scroll", (e) => {
   if ((window.scrollY > 500) & (window.scrollY < 1000)) {
@@ -225,7 +225,7 @@ scroll.addEventListener("click", (e) => {
   }
 });
 
-///// Scroll2 Codes /////
+///// Scroll 2 Codes /////
 
 window.addEventListener("scroll", (e) => {
   if (window.scrollY > 1000) {
@@ -276,11 +276,31 @@ popupCloses.forEach((popupCloses) => {
 // Codes for changing themes
 let theme = document.querySelector(".theme");
 let selection = document.querySelector("#selection");
+let span1 = document.querySelector(".span1");
+let span2 = document.querySelector(".span2");
+let span3 = document.querySelector(".span3");
+let span4 = document.querySelector(".span4");
+let span5 = document.querySelector(".span5");
+let span6 = document.querySelector(".span6");
+let span7 = document.querySelector(".span7");
+let span8 = document.querySelector(".span8");
+let span9 = document.querySelector(".span9");
+let span10 = document.querySelector(".span10");
 
 Array.from(theme.children).forEach((theme) => {
   theme.addEventListener("click", (e) => {
     let color = e.target.dataset.color;
     document.body.className = color;
     selection.textContent = color;
+    span1.style.color = "black";
+    span2.style.color = "black";
+    span3.style.color = "black";
+    span4.style.color = "black";
+    span5.style.color = "black";
+    span6.style.color = "black";
+    span7.style.color = "black";
+    span8.style.color = "black";
+    span9.style.color = "black";
+    span10.style.color = "black";
   });
 });
