@@ -237,9 +237,7 @@ window.addEventListener("scroll", (e) => {
 
 scroll2.addEventListener("click", (e) => {
   if (scroll2.classList.contains("show")) {
-    document
-      .querySelector("#art")
-      .scrollIntoView({ top: 0, behavior: "smooth" });
+    document.querySelector("#art").scrollIntoView({ top: 0, behavior: "smooth" });
   }
 });
 
@@ -272,5 +270,17 @@ popupCloses.forEach((popupCloses) => {
   popupWrapper.addEventListener("click", (e) => {
     document.querySelector(".popup").classList.remove("show");
     popupWrapper.classList.remove("show");
+  });
+});
+
+// Codes for changing themes
+let theme = document.querySelector(".theme");
+let selection = document.querySelector("#selection");
+
+Array.from(theme.children).forEach((theme) => {
+  theme.addEventListener("click", (e) => {
+    let color = e.target.dataset.color;
+    document.body.className = color;
+    selection.textContent = color;
   });
 });
